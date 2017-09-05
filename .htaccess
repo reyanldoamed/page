@@ -1,0 +1,19 @@
+#RewriteEngine on 
+#RewriteCond $1 !^(index\.php|robots\.txt|sitemap\.xml|plantilla|)
+#RewriteRule ^(.*)$ index.php/$1[L]
+ #<IfModule mod_rewrite.c>
+ 	#activacion de Rewrite
+ 	#RewriteEngine on
+
+ 	#RewriteCond $1 !^(index\.php|resources|robots\.txt|sitemap\.xml|plantilla|)
+
+ 	#verificamos si es un directorio o archivo
+ 	#RewriteCond %{REQUEST_FILENAME} !-f
+ 	#RewriteCond %{REQUEST_FILENAME} !-d
+
+ 	#Encaso de no existir redireccionamos
+ 	#RewriteRule ^(.*)$ /ruteo/index.php/$1[L,QSA] 
+ #</IfModule>
+ RewriteEngine On
+RewriteCond $1 !^(index\.php|robots\.txt|sitemap\.xml|stylo|img|js|assets|estilos|public|estilos2|public1)
+RewriteRule ^(.*)$ index.php/$1 [L]
